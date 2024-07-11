@@ -10,6 +10,6 @@ Death to bloatware!
 git clone https://github.com/ioresolution/android-debloater
 cd android-debloater 
 chmod +x debloater.sh
-./debloater.sh
+./debloat.sh
 ```
 
