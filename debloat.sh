@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# Remove packages
+# You probably need some of these e.g. gms(play service), vending(play store). 
+# Edit this to your need.
 packages=(
-  "com.google.android.gms"
+  "com.google.android.gms" #play service
   "com.huawei.android.totemweather"
   "com.netflix.partner.activation"
   "com.netflix.mediaclient"
@@ -63,7 +64,7 @@ packages=(
   "com.google.android.backuptransport"
   "com.google.android.apps.restore"
   "com.google.android.feedback"
-  "com.google.android.gm"
+  "com.google.android.gm" #gmail
   "com.google.android.onetimeinitializer"
   "com.google.android.setupwizard"
   "com.google.android.syncadapters.calendar"
@@ -89,8 +90,8 @@ packages=(
   "com.google.android.music"
   "com.google.android.overlay.gmsconfig"
   "com.google.android.printservice.recommendation"
-  "com.google.android.gms.policy_sidecar_aps"
-  "com.google.android.googlequicksearchbox"
+  "com.google.android.gms.policy_sidecar_aps" #play service 
+  "com.google.android.googlequicksearchbox" # google app
   "com.google.android.configupdater"
   "com.google.android.overlay.settingsProvider"
   "com.google.android.marvin.talkback"
@@ -107,10 +108,10 @@ packages=(
   "com.huawei.bd"
   "com.huawei.android.launcher"
   "com.huawei.hwid"
-  "com.huawei.omacp"
+  "com.huawei.omacp" 
   "com.huawei.hicloud"
   "com.huawei.meetime"
-  "com.android.vending"
+  "com.android.vending" # play store
   "com.android.chrome"
   "com.google.android.partnersetup"
   "com.agoda.mobile.consumer"
@@ -119,6 +120,7 @@ packages=(
   "com.booking"
 )
 
+# Remove packages from current user; not from system itself
 for package in "${packages[@]}"; do
   echo "Removing $package..."
   adb uninstall --user 0 $package
